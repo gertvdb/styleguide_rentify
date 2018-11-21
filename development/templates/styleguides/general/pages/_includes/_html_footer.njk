@@ -1,28 +1,14 @@
 <!-- APPLICATION/SITE SCRIPTS ////////////////////////////////////
 Using 'gulp-usemin' to concatenate Javascript files in production
 -->
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-<script src="/js/utils/requestAnimationFrame.js"></script>
-<!--<script src="{{ htmlParameters.rootPath }}js/utils/classlist-polyfill.js"></script>-->
-<!--<script src="{{ htmlParameters.rootPath }}js/utils/dataset-polyfill.js"></script>-->
-<!--<script src="{{ htmlParameters.rootPath }}js/utils/retina.js"></script>-->
-
 
 {# UI Components #}
-<script src="/js/components/range.js"></script>
-<!--<script src="{{ htmlParameters.rootPath }}js/components/fixed-navigation.js"></script>-->
-<!--<script src="{{ htmlParameters.rootPath }}js/components/video.js"></script>-->
-<!--<script src="{{ htmlParameters.rootPath }}js/components/popup.js"></script>-->
-
 <script src="/js/main.js"></script>
-
 
 
 {% if htmlParameters.isStyleguide %}
 	<script src="/js/vendor/jquery.scrollNav.js"></script>
-	<script src="/js/brandplatform/htmlencode.js"></script>
 	<script src="/js/brandplatform/navigation.js"></script>
-	<script src="/js/brandplatform/sandbox.js"></script>
 	<script src="/js/styleguide.js"></script>
 {% else %}
 	<script>

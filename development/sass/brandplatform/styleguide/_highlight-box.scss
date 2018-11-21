@@ -42,7 +42,10 @@
 	display: block;
 	transition: color 0.2s ease-in;
 	padding: 22px 80px 22px 22px;
-	background-image: repeating-linear-gradient(to top, transparent 0, transparent 21px, $brand-border 22px, $brand-border 22px);
+}
+
+.styleguide__highlight-box code br:first-child {
+	display: none;
 }
 
 .styleguide__highlight-box.is-open{
