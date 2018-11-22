@@ -7,6 +7,10 @@
 	overflow: hidden;
 	border: 1px solid $brand-border;
 
+	pre {
+		white-space: normal;
+	}
+
 	a{
 		position: absolute;
 		top: 0;

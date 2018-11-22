@@ -1,0 +1,58 @@
+{# ------------------------#}
+{# -------Code block-------#}
+{# ------------------------#}
+
+{% macro radioField(label) %}
+    <div class="a-input">
+        <label>
+            <input type="radio" name="input-radio" value="1" />
+            {{ label }}
+        </label>
+    </div>
+{% endmacro %}
+
+{% macro radiosField(label) %}
+    <div class="a-input">
+        <label for="input-radios">{{ label }}</label>
+        <div class="a-input__field-holder">
+            {{ radioField('Radio 1') }}
+            {{ radioField('Radio 2') }}
+            {{ radioField('Radio 3') }}
+            {{ radioField('Radio 4') }}
+        </div>
+    </div>
+{% endmacro %}
+
+{# ----------------------------#}
+{# ------Styleguide block------#}
+{# ----------------------------#}
+{% macro styleguide() %}
+    <h4 class="styleguide__sub-title js-scroll-nav__sub-title">Radios</h4>
+    <p class="styleguide__p">
+        Use &lt;a&gt; for navigation, &lt;button&gt; for everything else.
+        Submit/reset buttons are the only exceptions, using &lt;input [type="submit"]&gt;
+        to trigger default browser behaviour associated with submitting form input.
+    </p>
+
+    {% set radioField = radioField('Radio') %}
+    {{ radioField }}
+    <div class="styleguide__highlight-box">
+		<pre>
+			<code>
+				{{ radioField | forceescape | nl2br}}
+			</code>
+		</pre>
+    </div>
+
+    <p class="styleguide__p"></p>
+
+    {% set radiosField = radiosField('Radios') %}
+    {{ radiosField }}
+    <div class="styleguide__highlight-box">
+		<pre>
+			<code>
+				{{ radiosField | forceescape | nl2br}}
+			</code>
+		</pre>
+    </div>
+{% endmacro %}

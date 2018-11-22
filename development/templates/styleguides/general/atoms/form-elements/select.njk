@@ -1,12 +1,12 @@
 {# ------------------------#}
 {# -------Code block-------#}
 {# ------------------------#}
-{% macro code() %}
+{% macro selectField(label, placeholder, description) %}
 	<div class="a-input">
-		<label for="input-select">Default select</label>
+		<label for="input-select">{{ label }}</label>
 		<div class="a-input__field-holder">
 			<select name="input-selected" id="input-select">
-				<option value="" disabled selected>Make your selection...</option>
+				<option value="" disabled selected>{{ placeholder }}</option>
 				<option value="1">Option 1</option>
 				<option value="2">Option 2</option>
 				<option value="3">Option 3</option>
@@ -15,7 +15,7 @@
 			</select>
 			<span class="icon-arrow-down"></span>
 		</div>
-		<small>To mimic placeholder styling, add a 'has-no-value' class to the &lt;select&gt;</small>
+		<small>{{ description }}</small>
 	</div>
 {% endmacro %}
 
@@ -24,14 +24,19 @@
 {# ----------------------------#}
 {% macro styleguide() %}
 	<h4 class="styleguide__sub-title js-scroll-nav__sub-title">Select</h4>
-	<small>/sass/atoms/form-elements/select.scss</small>
-	<br/><br/>
+	<p class="styleguide__p">
+		Use &lt;a&gt; for navigation, &lt;button&gt; for everything else.
+		Submit/reset buttons are the only exceptions, using &lt;input [type="submit"]&gt;
+		to trigger default browser behaviour associated with submitting form input.
+	</p>
 
-	{{code()}}
-
+    {% set selectField = selectField('Select', 'Make a wise choice...', 'Hurry up and make a choice!') %}
+    {{ selectField }}
 	<div class="styleguide__highlight-box">
-		<code class="js-encode-html prettyprint">
-			{{code()}}
-		</code>
+		<pre>
+			<code>
+				{{ selectField | forceescape | nl2br}}
+			</code>
+		</pre>
 	</div>
 {% endmacro %}

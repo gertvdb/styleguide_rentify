@@ -33,7 +33,7 @@
 	{% macro h1(text) %}
 		<h1>{{ text }}</h1>
     {% endmacro %}
-    {% set h1 = h1('Good design is good business') %}
+    {% set h1 = h1(DATA.CONFIG.TYPO_HEADING) %}
 	<div class="styleguide__fonts">
     	{{ h1 }}
 	</div>
@@ -43,7 +43,7 @@
 	{% macro h2(text) %}
 		<h2>{{ text }}</h2>
     {% endmacro %}
-    {% set h2 = h2('Good design is always obvious, while great design is always transparent') %}
+    {% set h2 = h2(DATA.CONFIG.TYPO_HEADING) %}
 	<div class="styleguide__fonts">
         {{ h2 }}
 	</div>
@@ -53,7 +53,7 @@
 	{% macro h3(text) %}
 		<h3>{{ text }}</h3>
     {% endmacro %}
-    {% set h3 = h3('While everything is designed, only few things are designed to excell') %}
+    {% set h3 = h3(DATA.CONFIG.TYPO_HEADING) %}
 	<div class="styleguide__fonts">
         {{ h3 }}
 	</div>
@@ -64,7 +64,7 @@
     {% macro h4(text) %}
 		<h4>{{ text }}</h4>
     {% endmacro %}
-    {% set h4 = h4('Content is king and should always precede design. Design in the absence of content is not design, but decoration.') %}
+    {% set h4 = h4(DATA.CONFIG.TYPO_HEADING) %}
 	<div class="styleguide__fonts">
         {{ h4 }}
 	</div>
@@ -74,7 +74,7 @@
     {% macro h5(text) %}
 		<h5>{{ text }}</h5>
     {% endmacro %}
-    {% set h5 = h5('Online design trends change more often than the wind and slightly less often than my socks. Good design is timeless, good design creates culture. Culture shapes value and value determinates the future.') %}
+    {% set h5 = h5(DATA.CONFIG.TYPO_HEADING) %}
 	<div class="styleguide__fonts">
         {{ h5 }}
 	</div>
@@ -83,12 +83,12 @@
     {% macro h6(text) %}
 		<h6>{{ text }}</h6>
     {% endmacro %}
-    {% set h6 = h6('Always design a thing by considering it in its next larger context - a chair in a room, a room in a house, a house in an environment, an environment in a city plan.') %}
+    {% set h6 = h6(DATA.CONFIG.TYPO_HEADING) %}
 	<div class="styleguide__fonts">
         {{ h6 }}
 	</div>
 
-	<h4 class="styleguide__sub-title">Elements</h4>
+	<h4 class="styleguide__sub-title">HTML Elements</h4>
 	<p class="styleguide__p">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Curabitur dignissim tristique lorem, quis pharetra tellus euismod eu.
@@ -100,7 +100,7 @@
     {% macro p(text) %}
 		<p>{{ text }}</p>
     {% endmacro %}
-    {% set p = p('Many desperate acts of design (e.g. gradients, drop shadows, and the gratuitous use of transparency) are perpetuated in the absence of a strong concept. Good ideas provide a framework for design, guiding the work.') %}
+    {% set p = p(DATA.CONFIG.TYPO_PARAGRAPH)%}
 	<div class="styleguide__fonts">
         {{ p }}
 	</div>
@@ -109,7 +109,7 @@
     {% macro small(text) %}
 		<small>{{ text }}</small>
     {% endmacro %}
-    {% set small = small('People think that design is styling. Design is not style. It\'s not about giving shape to the shell and not giving a damn about the guts. Good design is a renaissance attitude that combines technology, cognitive science, human need, and beauty to produce something that the world didn\'t know it was missing.') %}
+    {% set small = small(DATA.CONFIG.TYPO_PARAGRAPH) %}
 	<div class="styleguide__fonts">
         {{ small }}
 	</div>
@@ -130,16 +130,11 @@
     {% macro a(text, href) %}
 		<a href="{{ href }}" title="{{ text }}">{{ text }}</a>
     {% endmacro %}
-    {% macro isHyperlink(text) %}
-		<span class="is-hyperlink">{{ text }}</span>
-    {% endmacro %}
 
     {% set a = a('This is a hyperlink', '#') %}
-    {% set isHyperlink = isHyperlink('This looks like a hyperlink') %}
 
 	<div class="styleguide__fonts">
         {{ a }}
-        {{ isHyperlink }}
 	</div>
 
 

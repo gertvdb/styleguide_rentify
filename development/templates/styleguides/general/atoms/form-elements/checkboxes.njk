@@ -1,0 +1,58 @@
+{# ------------------------#}
+{# -------Code block-------#}
+{# ------------------------#}
+
+{% macro checkboxField(label) %}
+    <div class="a-input">
+        <label>
+            <input type="checkbox" name="input-checkbox" value="1" />
+            {{ label }}
+        </label>
+    </div>
+{% endmacro %}
+
+{% macro checkboxesField(label) %}
+    <div class="a-input">
+        <label for="input-checkboxes">{{ label }}</label>
+        <div class="a-input__field-holder">
+            {{ checkboxField('Checkbox 1') }}
+            {{ checkboxField('Checkbox 2') }}
+            {{ checkboxField('Checkbox 3') }}
+            {{ checkboxField('Checkbox 4') }}
+        </div>
+    </div>
+{% endmacro %}
+
+{# ----------------------------#}
+{# ------Styleguide block------#}
+{# ----------------------------#}
+{% macro styleguide() %}
+    <h4 class="styleguide__sub-title js-scroll-nav__sub-title">Checkboxes</h4>
+    <p class="styleguide__p">
+        Use &lt;a&gt; for navigation, &lt;button&gt; for everything else.
+        Submit/reset buttons are the only exceptions, using &lt;input [type="submit"]&gt;
+        to trigger default browser behaviour associated with submitting form input.
+    </p>
+
+    {% set checkboxField = checkboxField('Checkbox') %}
+    {{ checkboxField }}
+    <div class="styleguide__highlight-box">
+		<pre>
+			<code>
+				{{ checkboxField | forceescape | nl2br}}
+			</code>
+		</pre>
+    </div>
+
+    <p class="styleguide__p"></p>
+
+    {% set checkboxesField = checkboxesField('Checkboxes') %}
+    {{ checkboxesField }}
+    <div class="styleguide__highlight-box">
+		<pre>
+			<code>
+				{{ checkboxesField | forceescape | nl2br}}
+			</code>
+		</pre>
+    </div>
+{% endmacro %}
