@@ -43,10 +43,11 @@
 {# ----------------------------#}
 {% macro styleguide() %}
 
-	<h4 class="styleguide__sub-title js-scroll-nav__sub-title">Lists</h4>
+	<h4 class="styleguide__sub-title js-scroll-nav__sub-title">Unnumbered list</h4>
 	<p class="styleguide__p">
-
+		A basic unnumbered list element.
 	</p>
+
 
     {% set listUl = listUl() %}
     {{ listUl }}
@@ -59,7 +60,10 @@
 		</pre>
 	</div>
 
-	<p class="styleguide__p"></p>
+	<h4 class="styleguide__sub-title js-scroll-nav__sub-title">Numbered list</h4>
+	<p class="styleguide__p">
+		A basic numbered list element.
+	</p>
 
 
     {% set listOl = listOl() %}
@@ -73,11 +77,10 @@
 		</pre>
 	</div>
 
-	<h4 class="styleguide__sub-title js-scroll-nav__sub-title">Inline Lists</h4>
+	<h4 class="styleguide__sub-title js-scroll-nav__sub-title">Numbered list</h4>
 	<p class="styleguide__p">
-
+		A inline list element.
 	</p>
-
 
     {% set inlineList = inlineList() %}
     {{ inlineList }}

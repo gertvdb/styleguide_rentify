@@ -16,7 +16,6 @@ Using 'gulp-usemin' to concatenate Javascript files in production
 {% else %}
 	<script>
 		var pages = {{DATA.STYLEGUIDES.GENERAL.PAGES | dump | safe }}._root;
-		console.log(pages);
 	</script>
 	<script src="/js/brandplatform/page.js"></script>
 {% endif %}
