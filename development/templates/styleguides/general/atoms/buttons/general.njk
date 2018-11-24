@@ -27,24 +27,6 @@
 	<input type="submit" class="a-button" disabled value="{{ text }}">
 {% endmacro %}
 
-
-{% macro code() %}
-	<a href="#buttons" class="a-button" title="Primary button">Primary button</a>
-	<br />
-
-	<button class="a-button" title="Icon button">
-		<span class="icon-close"></span><span class="is-hidden">Icon button</span>
-	</button>
-
-	<button class="a-button" title="With icon before">
-		<span class="icon-close"></span><span>With icon before</span>
-	</button>
-
-	<button class="a-button" title="With icon after">
-		<span>With icon after</span><span class="icon-close"></span>
-	</button>
-{% endmacro %}
-
 {# ----------------------------#}
 {# ------Styleguide block------#}
 {# ----------------------------#}
@@ -66,17 +48,6 @@
     {% set buttonSubmit = buttonSubmit('Primary button') %}
     {{ buttonSubmit }}
 
-
-	<div class="styleguide__highlight-box">
-		<code>
-			{{ button | forceescape | nl2br }}
-            {{ buttonLink | forceescape | nl2br }}
-            {{ buttonSubmit | forceescape | nl2br }}
-		</code>
-	</div>
-
-	<p class="styleguide__p"></p>
-
     {% set buttonDisabled = buttonDisabled('Disabled button') %}
     {{ buttonDisabled }}
 
@@ -88,11 +59,17 @@
 
 
 	<div class="styleguide__highlight-box">
-		<code>
-            {{ buttonDisabled | forceescape | nl2br }}
-            {{ buttonLinkDisabled | forceescape | nl2br }}
-            {{ buttonSubmitDisabled | forceescape | nl2br }}
-		</code>
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+				{{ button | forceescape | nl2br }}
+                {{ buttonLink | forceescape | nl2br }}
+                {{ buttonSubmit | forceescape | nl2br }}
+                {{ buttonDisabled | forceescape | nl2br }}
+                {{ buttonLinkDisabled | forceescape | nl2br }}
+                {{ buttonSubmitDisabled | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
 {% endmacro %}

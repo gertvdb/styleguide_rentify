@@ -2,11 +2,16 @@
 {# -------Code block-------#}
 {# ------------------------#}
 
-{% macro checkboxField(label) %}
-    <div class="a-input">
-        <label>
-            <input type="checkbox" name="input-checkbox" value="1" />
-            {{ label }}
+{% macro checkboxField(label, key, checked) %}
+    <div class="a-input a-toggle a-toggle--checkbox">
+        <label for="input-checkbox-{{ key }}">
+            <input id="input-checkbox-{{ key }}" type="checkbox" name="input-checkbox-{{ key }}" value="{{ key }}" {{ checked }}/>
+            <span class="a-toggle__input">
+				<span class="a-toggle__check"></span>
+			</span>
+            <span class="a-toggle__label">
+                {{ label }}
+            </span>
         </label>
     </div>
 {% endmacro %}
@@ -15,10 +20,10 @@
     <div class="a-input">
         <label for="input-checkboxes">{{ label }}</label>
         <div class="a-input__field-holder">
-            {{ checkboxField('Checkbox 1') }}
-            {{ checkboxField('Checkbox 2') }}
-            {{ checkboxField('Checkbox 3') }}
-            {{ checkboxField('Checkbox 4') }}
+            {{ checkboxField('Checkbox 1', '1') }}
+            {{ checkboxField('Checkbox 2', '2', 'checked') }}
+            {{ checkboxField('Checkbox 3', '3') }}
+            {{ checkboxField('Checkbox 4', '4') }}
         </div>
     </div>
 {% endmacro %}
@@ -27,18 +32,19 @@
 {# ------Styleguide block------#}
 {# ----------------------------#}
 {% macro styleguide() %}
-    <h4 class="styleguide__sub-title js-scroll-nav__sub-title">Checkboxes</h4>
+    <h4 class="styleguide__sub-title">Checkboxes</h4>
     <p class="styleguide__p">
         Use &lt;a&gt; for navigation, &lt;button&gt; for everything else.
         Submit/reset buttons are the only exceptions, using &lt;input [type="submit"]&gt;
         to trigger default browser behaviour associated with submitting form input.
     </p>
 
-    {% set checkboxField = checkboxField('I agree with the privacy policy.') %}
+    {% set checkboxField = checkboxField('I agree with the privacy policy.', 'agree') %}
     {{ checkboxField }}
     <div class="styleguide__highlight-box">
+        <div class="styleguide__highlight-box__header">Code Sample</div>
 		<pre>
-			<code>
+			<code class="html">
 				{{ checkboxField | forceescape | nl2br}}
 			</code>
 		</pre>
@@ -49,8 +55,9 @@
     {% set checkboxesField = checkboxesField('Checkboxes') %}
     {{ checkboxesField }}
     <div class="styleguide__highlight-box">
-		<pre>
-			<code>
+        <div class="styleguide__highlight-box__header">Code Sample</div>
+        <pre>
+			<code class="html">
 				{{ checkboxesField | forceescape | nl2br}}
 			</code>
 		</pre>

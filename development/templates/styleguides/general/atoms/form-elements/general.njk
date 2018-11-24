@@ -77,7 +77,7 @@
 {# ------Styleguide block------#}
 {# ----------------------------#}
 {% macro styleguide() %}
-	<h4 class="styleguide__sub-title js-scroll-nav__sub-title">Textfield</h4>
+	<h4 class="styleguide__sub-title">Textfield</h4>
 	<p class="styleguide__p">
 		Use &lt;a&gt; for navigation, &lt;button&gt; for everything else.
 		Submit/reset buttons are the only exceptions, using &lt;input [type="submit"]&gt;
@@ -87,8 +87,9 @@
     {% set textField = textField('Text input', 'Enter your text here', 'Tell the user what kind of input is expected, add a clickthrough as needed') %}
     {{ textField }}
 	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
 		<pre>
-			<code>
+			<code class="html">
 				{{ textField | forceescape | nl2br}}
 			</code>
 		</pre>
@@ -100,8 +101,9 @@
     {% set emailField = emailField('Email', 'info@your-domein.com', 'Don\'t worry, we won\'t spam you.') %}
     {{ emailField }}
 	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
 		<pre>
-			<code>
+			<code class="html">
 				{{ emailField | forceescape | nl2br}}
 			</code>
 		</pre>
@@ -113,8 +115,9 @@
     {% set passwordField = passwordField('Password', 'Enter your password here', 'Passwords should be 6 characters or more. Be tricky!') %}
     {{ passwordField }}
 	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
 		<pre>
-			<code>
+			<code class="html">
 				{{ passwordField | forceescape | nl2br}}
 			</code>
 		</pre>
@@ -126,8 +129,9 @@
     {% set numberField = numberField('Amount', '3', 'Select the number of products you want to order.') %}
     {{ numberField }}
 	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
 		<pre>
-			<code>
+			<code class="html">
 				{{ numberField | forceescape | nl2br}}
 			</code>
 		</pre>
@@ -139,8 +143,9 @@
     {% set phoneField = phoneField('Phone number', '+32 ××× ×× ×× ××', 'Don\'t worry, we only contact you when it\'s absolutely necessary.') %}
     {{ phoneField }}
 	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
 		<pre>
-			<code>
+			<code class="html">
 				{{ phoneField | forceescape | nl2br}}
 			</code>
 		</pre>
@@ -152,8 +157,9 @@
     {% set websiteField = websiteField('Website', 'https://', 'Tell us a little bit more about yourself.') %}
     {{ websiteField }}
 	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
 		<pre>
-			<code>
+			<code class="html">
 				{{ websiteField | forceescape | nl2br}}
 			</code>
 		</pre>
@@ -165,8 +171,9 @@
     {% set searchField = searchField('Search', 'Type to search', 'Can\'t find what you\'re looking for? Try our frequently asked questions.') %}
     {{ searchField }}
 	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
 		<pre>
-			<code>
+			<code class="html">
             	{{ searchField | forceescape | nl2br}}
 			</code>
 		</pre>

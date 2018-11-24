@@ -28,65 +28,106 @@
 		Curabitur dignissim tristique lorem, quis pharetra tellus euismod eu.
 	</p>
 
-	<small class="styleguide__info">Heading 1 - &lt;h1&gt; </small>
-
 	{% macro h1(text) %}
 		<h1>{{ text }}</h1>
     {% endmacro %}
     {% set h1 = h1(DATA.CONFIG.TYPO_HEADING) %}
-	<div class="styleguide__fonts">
-    	{{ h1 }}
+	{{ h1 }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ h1 | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
-	<small class="styleguide__info">Heading 2 - &lt;h2&gt;</small>
+	<p class="styleguide__p">&nbsp;</p>
 
 	{% macro h2(text) %}
 		<h2>{{ text }}</h2>
     {% endmacro %}
     {% set h2 = h2(DATA.CONFIG.TYPO_HEADING) %}
-	<div class="styleguide__fonts">
-        {{ h2 }}
+	{{ h2 }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ h2 | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
-	<small class="styleguide__info">Heading 3 - &lt;h3&gt;</small>
+	<p class="styleguide__p">&nbsp;</p>
 
-	{% macro h3(text) %}
+    {% macro h3(text) %}
 		<h3>{{ text }}</h3>
     {% endmacro %}
     {% set h3 = h3(DATA.CONFIG.TYPO_HEADING) %}
-	<div class="styleguide__fonts">
-        {{ h3 }}
+	{{ h3 }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ h3 | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
-
-	<small class="styleguide__info">Heading 4 - &lt;h4&gt;</small>
+	<p class="styleguide__p">&nbsp;</p>
 
     {% macro h4(text) %}
 		<h4>{{ text }}</h4>
     {% endmacro %}
     {% set h4 = h4(DATA.CONFIG.TYPO_HEADING) %}
-	<div class="styleguide__fonts">
-        {{ h4 }}
+	{{ h4 }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ h4 | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
+	<p class="styleguide__p">&nbsp;</p>
 
-	<small class="styleguide__info">Heading 5 - &lt;h5&gt;</small>
     {% macro h5(text) %}
 		<h5>{{ text }}</h5>
     {% endmacro %}
     {% set h5 = h5(DATA.CONFIG.TYPO_HEADING) %}
-	<div class="styleguide__fonts">
-        {{ h5 }}
+	{{ h5 }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ h5 | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
-	<small class="styleguide__info">Heading 6 - &lt;h6&gt;</small>
+	<p class="styleguide__p">&nbsp;</p>
+
     {% macro h6(text) %}
 		<h6>{{ text }}</h6>
     {% endmacro %}
     {% set h6 = h6(DATA.CONFIG.TYPO_HEADING) %}
-	<div class="styleguide__fonts">
-        {{ h6 }}
+	{{ h6 }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ h6 | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
+
 
 	<h4 class="styleguide__sub-title">HTML Elements</h4>
 	<p class="styleguide__p">
@@ -96,25 +137,43 @@
 		Curabitur dignissim tristique lorem, quis pharetra tellus euismod eu.
 	</p>
 
-	<small class="styleguide__info">Paragraph - &lt;p&gt;</small>
+	<small class="styleguide_small">Paragraph - &#x3C;p&#x3E;</small>
     {% macro p(text) %}
 		<p>{{ text }}</p>
     {% endmacro %}
     {% set p = p(DATA.CONFIG.TYPO_PARAGRAPH)%}
-	<div class="styleguide__fonts">
-        {{ p }}
+	{{ p }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ p | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
-	<small class="styleguide__info">Small text - &lt;small&gt;</small>
+	<p class="styleguide__p">&nbsp;</p>
+
+	<small class="styleguide_small">Small - &#x3C;small&#x3E;</small>
     {% macro small(text) %}
 		<small>{{ text }}</small>
     {% endmacro %}
     {% set small = small(DATA.CONFIG.TYPO_PARAGRAPH) %}
-	<div class="styleguide__fonts">
-        {{ small }}
+	{{ small }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ small | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
-	<small class="styleguide__info">Blockquote - &lt;blockquote&gt; <br /> Author/source - &lt;cite&gt;</small>
+	<p class="styleguide__p">&nbsp;</p>
+
+	<small class="styleguide_small">Blockquote/Cite - &#x3C;blockquote&#x3E;/&#x3C;cite&#x3E;</small>
     {% macro blockQuote(text, author) %}
 		<blockquote>
 			{{ text }}
@@ -122,70 +181,130 @@
 		</blockquote>
 	{% endmacro %}
     {% set blockQuote = blockQuote('Great design will not sell an inferior product, but it will enable great products to achieve their maximum potential.', 'Thomas J. Watson Jr.') %}
-	<div class="styleguide__fonts">
-        {{ blockQuote }}
+	{{ blockQuote }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ blockQuote | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
-	<small class="styleguide__info">Hyperlinks - &lt;a href=""&gt;, &lt;span class="is-hyperlink"&gt;</small>
+	<p class="styleguide__p">&nbsp;</p>
+
+	<small class="styleguide_small">Hyperlink - &#x3C;a&#x3E;</small>
     {% macro a(text, href) %}
 		<a href="{{ href }}" title="{{ text }}">{{ text }}</a>
     {% endmacro %}
 
     {% set a = a('This is a hyperlink', '#') %}
+	{{ a }}
 
-	<div class="styleguide__fonts">
-        {{ a }}
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ a | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
+	<p class="styleguide__p">&nbsp;</p>
 
-	<small class="styleguide__info">Strong - &lt;strong&gt;</small>
+
+	<small class="styleguide_small">Strong - &#x3C;strong&#x3E;</small>
     {% macro strong(text) %}
 		<strong>{{ text }}</strong>
 	{% endmacro %}
-
     {% set strong = strong('This text is strong') %}
-	<div class="styleguide__fonts">
-        {{ strong }}
+	{{ strong }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ strong | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
-	<small class="styleguide__info">Emphasized - &lt;em&gt;</small>
+	<p class="styleguide__p">&nbsp;</p>
+
+	<small class="styleguide_small">Emphasize - &#x3C;em&#x3E;</small>
     {% macro em(text) %}
 		<em>{{ text }}</em>
     {% endmacro %}
-
     {% set em = em('This text is emphasized') %}
-	<div class="styleguide__fonts">
-        {{ em }}
+	{{ em }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ em | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
-	<small class="styleguide__info">Quote - &lt;q&gt;</small>
+	<p class="styleguide__p">&nbsp;</p>
+
+
+	<small class="styleguide_small">Quote - &#x3C;q&#x3E;</small>
     {% macro quote(text) %}
 		<q>{{ text }}</q>
     {% endmacro %}
 
     {% set quote = quote('This text is quoted') %}
-	<div class="styleguide__fonts">
-        {{ quote }}
+	{{ quote }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ quote | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
+	<p class="styleguide__p">&nbsp;</p>
 
-	<small class="styleguide__info">Highlighted - &lt;mark&gt;</small>
+
+	<small class="styleguide_small">Highlight - &#x3C;mark&#x3E;</small>
     {% macro mark(text) %}
 		<mark>{{ text }}</mark>
     {% endmacro %}
 
     {% set mark = mark('This text is highlighted') %}
-	<div class="styleguide__fonts">
-        {{ mark }}
+	{{ mark }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ mark | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
 
-	<small class="styleguide__info">Obsolete/deleted/updated - &lt;del&gt;</small>
+	<p class="styleguide__p">&nbsp;</p>
+
+	<small class="styleguide_small">Deleted - &#x3C;del&#x3E;</small>
     {% macro del(text) %}
 		<del>{{ text }}</del>
     {% endmacro %}
 
     {% set del = del('This text is obsolete/deleted/updated') %}
-	<div class="styleguide__fonts">
-        {{ del }}
+	{{ del }}
+
+	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
+		<pre>
+			<code class="html">
+            	{{ del | forceescape | nl2br }}
+			</code>
+		</pre>
 	</div>
+
 {% endmacro %}

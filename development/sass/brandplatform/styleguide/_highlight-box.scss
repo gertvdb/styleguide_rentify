@@ -6,6 +6,16 @@
 	margin-top: 2em;
 	overflow: hidden;
 	border: 1px solid $brand-border;
+	box-shadow: 1px 1px 2em #E1E6EB;
+	border-radius: 4px 4px 0 0;
+
+	.styleguide__highlight-box__header {
+		background-color: $white;
+		border-bottom: 1px solid $brand-border;
+		padding: 10px 25px;
+		width: 100%;
+		font-size: 12px;
+	}
 
 	pre {
 		white-space: normal;

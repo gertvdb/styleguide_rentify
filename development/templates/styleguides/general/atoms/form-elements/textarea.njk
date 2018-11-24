@@ -15,7 +15,7 @@
 {# ------Styleguide block------#}
 {# ----------------------------#}
 {% macro styleguide() %}
-	<h4 class="styleguide__sub-title js-scroll-nav__sub-title">Textarea</h4>
+	<h4 class="styleguide__sub-title">Textarea</h4>
 	<p class="styleguide__p">
 		Use &lt;a&gt; for navigation, &lt;button&gt; for everything else.
 		Submit/reset buttons are the only exceptions, using &lt;input [type="submit"]&gt;
@@ -25,8 +25,9 @@
     {% set textareaField = textareaField('Textarea', 'Type something...', 'Feedback, suggestions, ideas, ... we would love to hear from you!') %}
     {{ textareaField }}
 	<div class="styleguide__highlight-box">
+		<div class="styleguide__highlight-box__header">Code Sample</div>
 		<pre>
-			<code>
+			<code class="html">
 				{{ textareaField | forceescape | nl2br}}
 			</code>
 		</pre>

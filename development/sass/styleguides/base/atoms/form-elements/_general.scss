@@ -52,6 +52,10 @@
 	border-color: $border-color-active;
 }
 
+::placeholder {
+	color: darken($border-color, 5%) !important;
+}
+
 .a-input input[disabled],
 .a-input select[disabled],
 .a-input textarea[disabled],
