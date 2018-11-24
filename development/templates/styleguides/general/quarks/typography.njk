@@ -7,10 +7,8 @@
 
 	<h4 class="styleguide__sub-title">Font stack</h4>
 	<p class="styleguide__p">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Curabitur dignissim tristique lorem, quis pharetra tellus euismod eu.
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Curabitur dignissim tristique lorem, quis pharetra tellus euismod eu.
+		Below are links to download the fonts that are used throughout this styleguide.
+		We use a limited amount of fonts to make sure the brand stands out.
 	</p>
 	<div>
 		<ul>
@@ -22,16 +20,13 @@
 
 	<h4 class="styleguide__sub-title">Headings</h4>
 	<p class="styleguide__p">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Curabitur dignissim tristique lorem, quis pharetra tellus euismod eu.
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Curabitur dignissim tristique lorem, quis pharetra tellus euismod eu.
+		The list of different heading sizes used throughout the project. Make sure you provide a nice vertical rhythm.
 	</p>
 
 	{% macro h1(text) %}
 		<h1>{{ text }}</h1>
     {% endmacro %}
-    {% set h1 = h1(DATA.CONFIG.TYPO_HEADING) %}
+    {% set h1 = h1(DATA.CONFIG.TEXT_DUMMY_SMALL) %}
 	{{ h1 }}
 
 	<div class="styleguide__highlight-box">
@@ -48,7 +43,7 @@
 	{% macro h2(text) %}
 		<h2>{{ text }}</h2>
     {% endmacro %}
-    {% set h2 = h2(DATA.CONFIG.TYPO_HEADING) %}
+    {% set h2 = h2(DATA.CONFIG.TEXT_DUMMY_SMALL) %}
 	{{ h2 }}
 
 	<div class="styleguide__highlight-box">
@@ -65,7 +60,7 @@
     {% macro h3(text) %}
 		<h3>{{ text }}</h3>
     {% endmacro %}
-    {% set h3 = h3(DATA.CONFIG.TYPO_HEADING) %}
+    {% set h3 = h3(DATA.CONFIG.TEXT_DUMMY_SMALL) %}
 	{{ h3 }}
 
 	<div class="styleguide__highlight-box">
@@ -82,7 +77,7 @@
     {% macro h4(text) %}
 		<h4>{{ text }}</h4>
     {% endmacro %}
-    {% set h4 = h4(DATA.CONFIG.TYPO_HEADING) %}
+    {% set h4 = h4(DATA.CONFIG.TEXT_DUMMY_MEDIUM) %}
 	{{ h4 }}
 
 	<div class="styleguide__highlight-box">
@@ -99,7 +94,7 @@
     {% macro h5(text) %}
 		<h5>{{ text }}</h5>
     {% endmacro %}
-    {% set h5 = h5(DATA.CONFIG.TYPO_HEADING) %}
+    {% set h5 = h5(DATA.CONFIG.TEXT_DUMMY_MEDIUM) %}
 	{{ h5 }}
 
 	<div class="styleguide__highlight-box">
@@ -116,7 +111,7 @@
     {% macro h6(text) %}
 		<h6>{{ text }}</h6>
     {% endmacro %}
-    {% set h6 = h6(DATA.CONFIG.TYPO_HEADING) %}
+    {% set h6 = h6(DATA.CONFIG.TEXT_DUMMY_MEDIUM) %}
 	{{ h6 }}
 
 	<div class="styleguide__highlight-box">
@@ -131,17 +126,14 @@
 
 	<h4 class="styleguide__sub-title">HTML Elements</h4>
 	<p class="styleguide__p">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Curabitur dignissim tristique lorem, quis pharetra tellus euismod eu.
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Curabitur dignissim tristique lorem, quis pharetra tellus euismod eu.
+		The list of all different html element used throughout the project. Provide a nice base styling for all element that fit the design.
 	</p>
 
 	<small class="styleguide_small">Paragraph - &#x3C;p&#x3E;</small>
     {% macro p(text) %}
 		<p>{{ text }}</p>
     {% endmacro %}
-    {% set p = p(DATA.CONFIG.TYPO_PARAGRAPH)%}
+    {% set p = p(DATA.CONFIG.TEXT_DUMMY_LARGE)%}
 	{{ p }}
 
 	<div class="styleguide__highlight-box">
@@ -159,7 +151,7 @@
     {% macro small(text) %}
 		<small>{{ text }}</small>
     {% endmacro %}
-    {% set small = small(DATA.CONFIG.TYPO_PARAGRAPH) %}
+    {% set small = small(DATA.CONFIG.TEXT_DUMMY_MEDIUM) %}
 	{{ small }}
 
 	<div class="styleguide__highlight-box">
@@ -173,14 +165,14 @@
 
 	<p class="styleguide__p">&nbsp;</p>
 
-	<small class="styleguide_small">Blockquote/Cite - &#x3C;blockquote&#x3E;/&#x3C;cite&#x3E;</small>
+	<small class="styleguide_small">Blockquote - &#x3C;blockquote&#x3E; &#x3C;cite&#x3E;</small>
     {% macro blockQuote(text, author) %}
 		<blockquote>
 			{{ text }}
 			<cite>{{ author }}</cite>
 		</blockquote>
 	{% endmacro %}
-    {% set blockQuote = blockQuote('Great design will not sell an inferior product, but it will enable great products to achieve their maximum potential.', 'Thomas J. Watson Jr.') %}
+    {% set blockQuote = blockQuote(DATA.CONFIG.TEXT_DUMMY_MEDIUM, DATA.CONFIG.TEXT_DUMMY_SMALL) %}
 	{{ blockQuote }}
 
 	<div class="styleguide__highlight-box">
@@ -199,7 +191,7 @@
 		<a href="{{ href }}" title="{{ text }}">{{ text }}</a>
     {% endmacro %}
 
-    {% set a = a('This is a hyperlink', '#') %}
+    {% set a = a(DATA.CONFIG.TEXT_DUMMY_SMALL, '#') %}
 	{{ a }}
 
 	<div class="styleguide__highlight-box">
@@ -218,7 +210,7 @@
     {% macro strong(text) %}
 		<strong>{{ text }}</strong>
 	{% endmacro %}
-    {% set strong = strong('This text is strong') %}
+    {% set strong = strong(DATA.CONFIG.TEXT_DUMMY_SMALL) %}
 	{{ strong }}
 
 	<div class="styleguide__highlight-box">
@@ -236,7 +228,7 @@
     {% macro em(text) %}
 		<em>{{ text }}</em>
     {% endmacro %}
-    {% set em = em('This text is emphasized') %}
+    {% set em = em(DATA.CONFIG.TEXT_DUMMY_SMALL) %}
 	{{ em }}
 
 	<div class="styleguide__highlight-box">
@@ -256,7 +248,7 @@
 		<q>{{ text }}</q>
     {% endmacro %}
 
-    {% set quote = quote('This text is quoted') %}
+    {% set quote = quote(DATA.CONFIG.TEXT_DUMMY_SMALL) %}
 	{{ quote }}
 
 	<div class="styleguide__highlight-box">
@@ -276,7 +268,7 @@
 		<mark>{{ text }}</mark>
     {% endmacro %}
 
-    {% set mark = mark('This text is highlighted') %}
+    {% set mark = mark(DATA.CONFIG.TEXT_DUMMY_SMALL) %}
 	{{ mark }}
 
 	<div class="styleguide__highlight-box">
@@ -295,7 +287,7 @@
 		<del>{{ text }}</del>
     {% endmacro %}
 
-    {% set del = del('This text is obsolete/deleted/updated') %}
+    {% set del = del(DATA.CONFIG.TEXT_DUMMY_SMALL) %}
 	{{ del }}
 
 	<div class="styleguide__highlight-box">

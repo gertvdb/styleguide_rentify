@@ -34,12 +34,8 @@
 {% macro styleguide() %}
     <h4 class="styleguide__sub-title">Radios</h4>
     <p class="styleguide__p">
-        Use &lt;a&gt; for navigation, &lt;button&gt; for everything else.
-        Submit/reset buttons are the only exceptions, using &lt;input [type="submit"]&gt;
-        to trigger default browser behaviour associated with submitting form input.
+        A form element building block for multiple radio buttons. (a single radio button doesn't exists per definition).
     </p>
-
-    <p class="styleguide__p"></p>
 
     {% set radiosField = radiosField('Radios') %}
     {{ radiosField }}

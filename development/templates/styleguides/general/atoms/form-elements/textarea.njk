@@ -17,10 +17,9 @@
 {% macro styleguide() %}
 	<h4 class="styleguide__sub-title">Textarea</h4>
 	<p class="styleguide__p">
-		Use &lt;a&gt; for navigation, &lt;button&gt; for everything else.
-		Submit/reset buttons are the only exceptions, using &lt;input [type="submit"]&gt;
-		to trigger default browser behaviour associated with submitting form input.
+		A form element building block for textareas.
 	</p>
+
 
     {% set textareaField = textareaField('Textarea', 'Type something...', 'Feedback, suggestions, ideas, ... we would love to hear from you!') %}
     {{ textareaField }}

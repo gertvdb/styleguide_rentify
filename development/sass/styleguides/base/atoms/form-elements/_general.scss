@@ -53,7 +53,7 @@
 }
 
 ::placeholder {
-	color: darken($border-color, 5%) !important;
+	color: lighten($font-color, 5%) !important;
 }
 
 .a-input input[disabled],

@@ -4,7 +4,7 @@
 
 {% macro checkboxField(label, key, checked) %}
     <div class="a-input a-toggle a-toggle--checkbox">
-        <label for="input-checkbox-{{ key }}">
+       <label for="input-checkbox-{{ key }}">
             <input id="input-checkbox-{{ key }}" type="checkbox" name="input-checkbox-{{ key }}" value="{{ key }}" {{ checked }}/>
             <span class="a-toggle__input">
 				<span class="a-toggle__check"></span>
@@ -34,9 +34,7 @@
 {% macro styleguide() %}
     <h4 class="styleguide__sub-title">Checkboxes</h4>
     <p class="styleguide__p">
-        Use &lt;a&gt; for navigation, &lt;button&gt; for everything else.
-        Submit/reset buttons are the only exceptions, using &lt;input [type="submit"]&gt;
-        to trigger default browser behaviour associated with submitting form input.
+        A form element building block for single and multiple checkboxes.
     </p>
 
     {% set checkboxField = checkboxField('I agree with the privacy policy.', 'agree') %}
@@ -50,7 +48,7 @@
 		</pre>
     </div>
 
-    <p class="styleguide__p"></p>
+    <p class="styleguide__p">&nbsp;</p>
 
     {% set checkboxesField = checkboxesField('Checkboxes') %}
     {{ checkboxesField }}

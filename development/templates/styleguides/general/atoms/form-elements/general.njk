@@ -79,9 +79,7 @@
 {% macro styleguide() %}
 	<h4 class="styleguide__sub-title">Textfield</h4>
 	<p class="styleguide__p">
-		Use &lt;a&gt; for navigation, &lt;button&gt; for everything else.
-		Submit/reset buttons are the only exceptions, using &lt;input [type="submit"]&gt;
-		to trigger default browser behaviour associated with submitting form input.
+		A form element building block for all textfield variations.
 	</p>
 
     {% set textField = textField('Text input', 'Enter your text here', 'Tell the user what kind of input is expected, add a clickthrough as needed') %}
@@ -95,7 +93,7 @@
 		</pre>
 	</div>
 
-	<p class="styleguide__p"></p>
+	<p class="styleguide__p">&nbsp;</p>
 
 
     {% set emailField = emailField('Email', 'info@your-domein.com', 'Don\'t worry, we won\'t spam you.') %}
@@ -109,7 +107,7 @@
 		</pre>
 	</div>
 
-	<p class="styleguide__p"></p>
+	<p class="styleguide__p">&nbsp;</p>
 
 
     {% set passwordField = passwordField('Password', 'Enter your password here', 'Passwords should be 6 characters or more. Be tricky!') %}
@@ -123,7 +121,7 @@
 		</pre>
 	</div>
 
-	<p class="styleguide__p"></p>
+	<p class="styleguide__p">&nbsp;</p>
 
 
     {% set numberField = numberField('Amount', '3', 'Select the number of products you want to order.') %}
@@ -137,7 +135,7 @@
 		</pre>
 	</div>
 
-	<p class="styleguide__p"></p>
+	<p class="styleguide__p">&nbsp;</p>
 
 
     {% set phoneField = phoneField('Phone number', '+32 ××× ×× ×× ××', 'Don\'t worry, we only contact you when it\'s absolutely necessary.') %}
@@ -151,7 +149,7 @@
 		</pre>
 	</div>
 
-	<p class="styleguide__p"></p>
+	<p class="styleguide__p">&nbsp;</p>
 
 
     {% set websiteField = websiteField('Website', 'https://', 'Tell us a little bit more about yourself.') %}
@@ -165,7 +163,7 @@
 		</pre>
 	</div>
 
-	<p class="styleguide__p"></p>
+	<p class="styleguide__p">&nbsp;</p>
 
 
     {% set searchField = searchField('Search', 'Type to search', 'Can\'t find what you\'re looking for? Try our frequently asked questions.') %}
